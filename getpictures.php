@@ -1,7 +1,8 @@
 <?php
 
 require_once("include/phpFlickr.php");
-echo 'hello';
+
+  echo '<a href="http://www.google.com">google</a>';
 
 /*-------- Flickr Authentication --------*/
 $api_key = '34bb76a2a193945123756ef689d2e9ef';
