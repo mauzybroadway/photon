@@ -16,7 +16,7 @@ if($_POST){
         }else if($_FILES["file"]["type"] != "image/jpg" && $_FILES["file"]["type"] != "image/jpeg" && $_FILES["file"]["type"] != "image/png" && $_FILES["file"]["type"] != "image/gif"){
             /* Filter all bad file types */
             $error = 3;
-        }else if(intval($_FILES["file"]["size"]) > 525000){
+        }else if(intval($_FILES["file"]["size"]) > 1000000){
             /* Filter all files greater than 512 KB */
             $error = 4;
         }else{
