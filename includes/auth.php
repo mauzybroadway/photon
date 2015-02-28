@@ -9,7 +9,7 @@
     $api_key                 = "34bb76a2a193945123756ef689d2e9ef";
     $api_secret              = "4a6d997a30a3323f";
     $default_redirect        = "/";
-    $permissions             = "read";
+    $permissions             = "write";
     $path_to_phpFlickr_class = "./";
 
     ob_start();
