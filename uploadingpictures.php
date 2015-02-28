@@ -10,11 +10,11 @@ $phpFlickrObj->setToken('72157650677930220-6f864764e9bc8e83');
 $phpFlickrObj->auth("write");
 /*---------------------------------------*/
 
-echo '<a href="http://www.google.com">google</a>';
+
 // Get user information
 $user = $phpFlickrObj->people_findByUsername('ph0ton1');
 $user_url = $phpFlickrObj->urls_getUserPhotos($user['id']);
-
+echo '<a href="http://www.google.com">google</a>';
 
 $result = $phpFlickrObj->sync_upload('images/photo1.jpg', null, null, 'mytag', 1);
 
