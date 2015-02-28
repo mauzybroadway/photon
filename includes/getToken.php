@@ -9,7 +9,7 @@
      */
 
     require_once("phpFlickr.php");
-    $f = new phpFlickr("2770113152457cb8013e4f097a79d767", "457d05626fe6feed");
+    $f = new phpFlickr("34bb76a2a193945123756ef689d2e9ef", "4a6d997a30a3323f");
     
     //change this to the permissions you will need
     $f->auth("write");
