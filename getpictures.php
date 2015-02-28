@@ -1,6 +1,7 @@
 <?php
 
 require_once("include/phpFlickr.php");
+echo 'hello';
 
 /*-------- Flickr Authentication --------*/
 $api_key = '34bb76a2a193945123756ef689d2e9ef';
@@ -10,7 +11,7 @@ $phpFlickrObj->setToken('72157650677930220-6f864764e9bc8e83');
 $phpFlickrObj->auth("write");
 /*---------------------------------------*/
 
-echo 'hello';
+
 // Get user information
 $user = $phpFlickrObj->people_findByUsername('ph0ton1');
 $user_url = $phpFlickrObj->urls_getUserPhotos($user['id']);
