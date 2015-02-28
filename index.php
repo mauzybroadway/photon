@@ -33,10 +33,10 @@ if($_POST){
 } 
 
 function uploadPhoto($path, $title) {
-    $apiKey = "3b7d4ab3e54988c4e6fd59d9e40ca28c";
-    $apiSecret = "84d2e480c8e3c926";
+    $apiKey = "e429519b8f5703c57c6776a60dfc0583";
+    $apiSecret = "81617fd7844165cf";
     $permissions  = "write";
-    $token        = "72157626228984291-4635fa88a6fed8f5";
+    $token        = "72157650634145157-428e5e1a693b769d";
 
     $f = new phpFlickr($apiKey, $apiSecret, true);
     $f->setToken($token);
