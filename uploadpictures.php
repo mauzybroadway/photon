@@ -5,17 +5,14 @@ require_once("includes/phpFlickr.php");
 /*-------- Flickr Authentication --------*/
 $api_key = '34bb76a2a193945123756ef689d2e9ef';
 $secret = '4a6d997a30a3323f';
-$phpFlickrObj = new phpFlickr($api_key, $secret);
-$phpFlickrObj->setToken('72157650677930220-6f864764e9bc8e83');
+$token = '72157650677930220-6f864764e9bc8e83';
+$phpFlickrObj = new phpFlickr($api_key, $secret, true);
+$phpFlickrObj->setToken($token);
 $phpFlickrObj->auth("write");
 /*---------------------------------------*/
 
-
-// Get user information
-$user = $phpFlickrObj->people_findByUsername('ph0ton1');
-$user_url = $phpFlickrObj->urls_getUserPhotos($user['id']);
+return $phpFlickrObj->async_upload("photo1.jpg");
 
 
-$result = $phpFlickrObj->sync_upload("photo1.jpg");
-echo '<a href="http://www.google.com">googleeee2</a>';
+echo '<a href="http://www.google.com">googleeee3</a>';
 ?>
