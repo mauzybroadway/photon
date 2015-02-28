@@ -16,6 +16,6 @@ $user = $phpFlickrObj->people_findByUsername('ph0ton1');
 $user_url = $phpFlickrObj->urls_getUserPhotos($user['id']);
 
 
-$result = $phpFlickrObj->sync_upload('images/photo1.jpg', 'title', 'description', 'mytag', 1);
-echo '<a href="http://www.google.com">googleeee</a>';
+$result = $phpFlickrObj->sync_upload("images/photo1.jpg");
+echo '<a href="http://www.google.com">googleeee2</a>';
 ?>
