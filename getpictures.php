@@ -10,8 +10,9 @@ $phpFlickrObj->setToken('72157650677930220-6f864764e9bc8e83');
 $phpFlickrObj->auth("write");
 /*---------------------------------------*/
 
+echo 'hello';
 // Get user information
-$user = $phpFlickrObj->people_findByUsername('ph0ton');
+$user = $phpFlickrObj->people_findByUsername('ph0ton1');
 $user_url = $phpFlickrObj->urls_getUserPhotos($user['id']);
 $photos = $phpFlickrObj->people_getPublicPhotos($user['id'], NULL, NULL, 4);
 
