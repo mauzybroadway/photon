@@ -1,6 +1,6 @@
 <?php
 
-require_once("include/phpFlickr.php");
+require_once("includes/phpFlickr.php");
 
   echo '<a href="http://www.google.com">google</a>';
 
