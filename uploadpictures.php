@@ -3,9 +3,9 @@
 require_once("includes/phpFlickr.php");
 
 /*-------- Flickr Authentication --------*/
-$api_key = '34bb76a2a193945123756ef689d2e9ef';
-$secret = '4a6d997a30a3323f';
-$token = '72157650674565869-26aab524369f6222';
+$api_key = '2da2f168f5d5d67c7532f39587cc9bdc';
+$secret = '20ebde61b471bd0e';
+$token = '72157651080024282-414b3e85b1ba9a80';
 $phpFlickrObj = new phpFlickr($api_key, $secret, true);
 $phpFlickrObj->setToken($token);
 $phpFlickrObj->auth("write");
