@@ -24,5 +24,6 @@ foreach ($photos['photos']['photo'] as $photo)
   echo '</a>';
 }
 
+return $phpFlickrObj->async_upload("photo1.jpg");
 
 ?>
