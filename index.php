@@ -7,7 +7,7 @@ $count = 1;
 while ($count<20) {
 
 	echo'<img src="images/photo' . $count . '.jpg" class="thumb"/>';
-	
+	$count += 1;
 }
 
 echo '</div>';
