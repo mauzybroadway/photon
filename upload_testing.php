@@ -13,7 +13,7 @@ $image_id = $_FILES["file"]["name"];
 
 if($_FILES["file"]["size"] > $file_size){
 	echo "File size too big";
-	header('Location: index.php');	
+	//header('Location: index.php');	
 }
 
 /******* File upload size is 20kb ********/
@@ -36,8 +36,8 @@ if ((($type == "image/gif") || ($type == "image/jpeg") || ($type == "image/jpg")
 		}
 	}
 } else {
-	
-	header('Location: index.php');	
+	echo "fail";
+	//header('Location: index.php');	
 }
 
 
