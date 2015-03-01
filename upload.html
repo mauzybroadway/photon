@@ -23,13 +23,8 @@
             <form action="upload_testing.php" method="post" enctype="multipart/form-data">
                 
  
-                <input type="file" name="file" id="file" accept="image/*">
-                <p class="hint">hover over upload button for details</p>
-                                
+                <input type="file" name="file" id="file" onchange="this.form.submit();" accept="image/*">                                
 
-                <div class="button_container">
-                    <input type="submit" class="button" name="submit" id="list" value="List"></input>
-                </div>
 
             </form>
 
