@@ -1,7 +1,7 @@
 <?php
 
 //Include phpFlickr
-require_once("phpFlickr/phpFlickr.php");
+require_once("includes/phpFlickr.php");
 
 $error=0;
 $f = null;

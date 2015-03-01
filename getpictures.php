@@ -1,6 +1,6 @@
 <?php
 
-require_once("phpFlickr/phpFlickr.php");
+require_once("includes/phpFlickr.php");
 
 /*-------- Flickr Authentication --------*/
 $api_key = 'e429519b8f5703c57c6776a60dfc0583';
