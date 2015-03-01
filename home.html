@@ -23,10 +23,15 @@
 		ph<b>o</b>ton
 	      </div>
 	      <!--ul id="nav"-->
+		<form class="upload_form" action="upload_testing.php" method="post" enctype="multipart/form-data">       
+	       <input class="upload_box" type="file" name="file" id="file" onchange="document.getElementById('submit_button').click();" accept="image/*"/>
+           <input class="upload_button" type="submit" class="submit_button" id="submit_button" />
+         </form>
 		<form class="search_form">
 		  <input class="search_box" type="text" placeholder="Search..." required>
                   <input class="search_button" type="button" value="Search">
 		</form>
+
 	      <!--/ul-->
 	    </div>
 	  </div>

@@ -126,6 +126,39 @@ img.thumb {
 }
 
 /***************
+    Upload Button
+***************/
+
+.upload_form {
+    margin-top:-38px;
+    right: 50px;
+    float: right;
+    padding-right:20px;
+    width:129px;
+}
+.upload_box {
+    width:200px;
+    float:right;
+    left:0;
+    padding:8px 4px;
+    background:rgba(50, 50, 50, 0.2);
+    border:0px solid #dbdbdb;
+}
+.upload_button {
+    display:none;
+    position:relative;
+    padding:6px 15px;
+    left:-8px;
+    border:2px solid #CE5858;
+    background-color:#CE5858;
+    color:#fafafa;
+}
+.upload_button:hover  {
+    background-color:#fafafa;
+    color:#207cca;
+}
+
+/***************
     
 ***************/
 
