@@ -17,7 +17,12 @@ $phpFlickrObj->auth("write");
 $user = $phpFlickrObj->people_findByUsername('mauzy_broadway');
 $user_url = $phpFlickrObj->urls_getUserPhotos($user['id']);
 //$photos = $phpFlickrObj->people_getPublicPhotos($user['id'], NULL, "testtag");
-$photos = $phpFlickrObj->people_getPhotos($user['id'], array("tags"=>"testtag", "tag_mode"=>"any"));
+
+//Comma separated list of tags to search for
+$input= str_replace(" ", "", $_POST['tag']);
+$tags = "testtag";
+$tags = $input;
+$photos = $phpFlickrObj->people_getPhotos($user['id'], array("tags"=>$tags, "tag_mode"=>"any"));
 
 foreach ($photos['photos']['photo'] as $photo)
 {
