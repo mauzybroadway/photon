@@ -1,4 +1,5 @@
-<?php $filename = 'test.txt';
+<?php 
+$filename = 'enterthevoid.pho';
 $Content = "Add this to the file\r\n";
  
 echo "open";
