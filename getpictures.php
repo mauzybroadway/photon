@@ -27,7 +27,7 @@ $photos = $phpFlickrObj->people_getPhotos($user['id'], array("tags"=>$tags, "tag
 foreach ($photos['photos']['photo'] as $photo)
 {
   echo '<a href="'.$user_url.$photo['id'].'" title="'.$photo['title'].' (on Flickr)" target="_blank">';
-  echo '<img alt="'.$photo['title'].'" src="'.$phpFlickrObj->buildPhotoURL($photo, "square").'" />';
+  echo '<img alt="'.$photo['title'].'" src="'.$phpFlickrObj->buildPhotoURL($photo, "_k").'" />';
   echo '</a>';
 }
 
