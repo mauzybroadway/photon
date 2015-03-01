@@ -63,8 +63,8 @@ a.button {
 input#login, input#signup, input#search, input#list, input#directions {
 	margin: 5px auto;
 	float: center;
-	width: 445px;
-	height: 102px;
+	width: 45px;
+	height: 12px;
 }
 
 .button_container {
@@ -202,12 +202,12 @@ input {
 	background-color: #1D9EA4;
 	border: #ffffff solid thick;
 	border-radius: 18px;
-	height: 72px;
+	height: 12px;
 	color: #ffffff;
 	font-size: 36px;
 	margin: 10px;
 	padding: 10px;
-	width: 90%;
+	width: ;
 }
 
 textarea, input { 
@@ -344,3 +344,27 @@ a.item {
 	}
 }
 
+/*************************
+		SEARCH BOX
+*************************/
+form {
+                width:500px;
+                margin:50px auto;
+}
+.search {
+                padding:8px 15px;
+                background:rgba(50, 50, 50, 0.2);
+                border:0px solid #dbdbdb;
+}
+.button {
+                position:relative;
+                padding:6px 15px;
+                left:-8px;
+                border:2px solid #207cca;
+                background-color:#207cca;
+                color:#fafafa;
+}
+.button:hover  {
+                background-color:#fafafa;
+                color:#207cca;
+}
