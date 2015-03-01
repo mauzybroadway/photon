@@ -16,7 +16,7 @@ if($_POST){
         }else if($_FILES["file"]["type"] != "image/jpg" && $_FILES["file"]["type"] != "image/jpeg" && $_FILES["file"]["type"] != "image/png" && $_FILES["file"]["type"] != "image/gif"){
             /* Filter all bad file types */
             $error = 3;
-        }else if(intval($_FILES["file"]["size"]) > 525000){
+        }else if(intval($_FILES["file"]["size"]) > 1000000){
             /* Filter all files greater than 512 KB */
             $error = 4;
         }else{
@@ -46,7 +46,7 @@ function uploadPhoto($path, $title) {
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-   <title>HackerPics</title>
+   <title>Photon</title>
    
    <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
    <link rel="stylesheet" href="style.css" type="text/css">
@@ -62,7 +62,7 @@ function uploadPhoto($path, $title) {
 
 <?php
 if (isset($_POST['name']) && $error==0) {
-    echo "  <h2>Your file has been uploaded to <a href='http://www.flickr.com/photos/61074807@N08/' target='_blank'>rkj_flickr's photo stream</a></h2>";
+    echo "  <h2>Your file has been uploaded to <a href='http://www.flickr.com/photos/131602302@N05/' target='_blank'>Mauzy's photo stream</a></h2>";
 }else {
     if($error == 1){
         echo "  <font color='red'>Please provide both name and a file</font>";
