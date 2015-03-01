@@ -3,9 +3,9 @@ $filename = 'enterthevoid.pho';
 $Content = "Add this new to the file\r\n";
  
 echo "open";
-$handle = fopen($filename, 'x+');
+$handle = fopen($filename, 'a');
 echo "clear";
-ftruncate($handle, 0);
+//ftruncate($handle, 0);
 echo " write";
 fwrite($handle, $Content);
 echo " close";
