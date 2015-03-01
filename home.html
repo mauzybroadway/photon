@@ -8,54 +8,57 @@
 
 		<!-- DISABLES PINCH TO ZOOM -->
 		<meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
-		
+
 		<!-- STYLE -->
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 		<link rel="shortcut icon" href="favicon.ico" />
 		<link rel="stylesheet" href="style/style.css" type="text/css" />
 	</head>
-	
+
 	<body>
-	  
-	  <div id="sidebar">
-	    <div id="sidebar_content">
-	      <div class="title">
-		ph<b>o</b>ton
-	      </div>
-	      <!--ul id="nav"-->
-		<form class="upload_form" action="upload_testing.php" method="post" enctype="multipart/form-data">       
-	       <input class="upload_box" type="file" name="file" id="file" onchange="document.getElementById('submit_button').click();" accept="image/*"/>
-           <input class="upload_button" type="submit" class="submit_button" id="submit_button" />
-         </form>
-		<form class="search_form">
-		  <input class="search_box" type="text" placeholder="Search..." required>
-                  <input class="search_button" type="button" value="Search">
+
+		<div id="sidebar">
+			<div id="sidebar_content">
+				<div class="title">
+					ph<b>o</b>ton
+					<input class="upload_plus_button" onclick="document.getElementById('file').click();" type="image" src="images/upload.png" />
+				</div>
+				<!--ul id="nav"-->
+
+				<form class="search_form">
+					<input class="search_box" type="text" placeholder="Search..." required>
+					<input class="search_button" type="button" value="Search">
+				</form>
+
+				<!--/ul-->
+			</div>
+		</div>
+
+		<!-- Hidden -->
+		<form class="upload_form" action="upload_testing.php" method="post" enctype="multipart/form-data">
+			<input class="upload_box" type="file" name="file" id="file" onchange="document.getElementById('submit_button').click();" accept="image/*"/>
+			<input class="upload_button" type="submit" class="submit_button" id="submit_button" />
 		</form>
 
-	      <!--/ul-->
-	    </div>
-	  </div>
-	  
-	  
-	  <div id="content">
-	    <div class="images">
-	      <img src="images/photo8.jpg" class="thumb"/>
-	      <img src="images/photo9.jpg" class="thumb"/>
-	      <img src="images/photo10.jpg" class="thumb"/>
-	      <img src="images/photo14.jpg" class="thumb"/>
-	      <img src="images/photo11.jpg" class="thumb"/>
-	      <img src="images/photo12.jpg" class="thumb"/>
-	      <img src="images/photo13.jpg" class="thumb"/>
-	      <img src="images/photo1.jpg" class="thumb"/>
-	      <img src="images/photo2.jpg" class="thumb"/>
-	      <img src="images/photo3.jpg" class="thumb"/>
-	      <img src="images/photo4.jpg" class="thumb"/>
-	      <img src="images/photo17.jpg" class="thumb"/>
-	      <img src="images/photo18.jpg" class="thumb"/>
-	      <img src="images/photo16.jpg" class="thumb"/>
-	      <img src="images/photo19.jpg" class="thumb"/>
-	    </div>
-	  </div>
-	  
+		<div id="content">
+			<div class="images">
+				<img src="images/photo8.jpg" class="thumb"/>
+				<img src="images/photo9.jpg" class="thumb"/>
+				<img src="images/photo10.jpg" class="thumb"/>
+				<img src="images/photo14.jpg" class="thumb"/>
+				<img src="images/photo11.jpg" class="thumb"/>
+				<img src="images/photo12.jpg" class="thumb"/>
+				<img src="images/photo13.jpg" class="thumb"/>
+				<img src="images/photo1.jpg" class="thumb"/>
+				<img src="images/photo2.jpg" class="thumb"/>
+				<img src="images/photo3.jpg" class="thumb"/>
+				<img src="images/photo4.jpg" class="thumb"/>
+				<img src="images/photo17.jpg" class="thumb"/>
+				<img src="images/photo18.jpg" class="thumb"/>
+				<img src="images/photo16.jpg" class="thumb"/>
+				<img src="images/photo19.jpg" class="thumb"/>
+			</div>
+		</div>
+
 	</body>
 </html>

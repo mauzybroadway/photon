@@ -21,8 +21,9 @@
 
 
             <form action="upload_testing.php" method="post" enctype="multipart/form-data">       
-                <input type="file" name="file" id="file"  accept="image/*"/>
+                <input type="file" name="file" id="file" onchange="document.getElementById('submit_button').click();" accept="image/*"/>
                                 
+                <input type="submit" class="submit_button" id="submit_button" />
             </form>
 
         </div>
