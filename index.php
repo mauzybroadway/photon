@@ -1,6 +1,6 @@
 <?php
 include_once ("home.html");
 
-header('Location: index.php');	
+header('Location: getpictures.php');	
 
 ?>
