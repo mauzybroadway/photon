@@ -1,5 +1,5 @@
 <?php 
-$filename = 'test.t';
+$filename = 'test.txt';
 $Content = "Add this new to the file\r\n";
  
 echo "open";
