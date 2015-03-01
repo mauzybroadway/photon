@@ -18,28 +18,31 @@
 	<body>
 
 		<div id="sidebar">
-			<div id="sidebar_content">
+			<table style="width:100%">
+
+				<td style="width:40%;">
 				<div class="title">
 					ph<b>o</b>ton
+				</div></td>
+				<td align="center">
+				<table cellspacing="0" cellpadding="0" border="0" >
+					<td style="width:auto; padding-right: 20px;">
 					<input class="upload_plus_button" onclick="document.getElementById('file').click();" type="image" src="images/upload.png" />
-				</div>
-				<!--ul id="nav"-->
-
+					</td>
+					<td style="width:auto; padding-left: 20px;">
+					<form class="upload_form" action="upload_testing.php" method="post" enctype="multipart/form-data">
+						<input class="upload_box" type="file" name="file" id="file" accept="image/*"/>
+						<input class="upload_button" type="image" name="submit" src="images/right_arrow.png" border="0" alt="Submit" />
+					</form></td>
+				</table></td>
+				<td style="width:40%;">
 				<form class="search_form">
 					<input class="search_box" type="text" placeholder="Search..." required>
 					<input class="search_button" type="button" value="Search">
-				</form>
-
-				<!--/ul-->
-			</div>
+				</form></td>
+			</table>
 		</div>
-
-		<!-- Hidden -->
-		<form class="upload_form" action="upload_testing.php" method="post" enctype="multipart/form-data">
-			<input class="upload_box" type="file" name="file" id="file" onchange="setTimeout(function() {document.getElementById('submit_button').click();},750);" accept="image/*"/>
-			<input class="upload_button" type="submit" class="submit_button" id="submit_button" />
-		</form>
-
+		
 		<div id="content">
 			<div class="images">
 				<img src="images/photo8.jpg" class="thumb"/>

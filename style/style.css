@@ -70,6 +70,7 @@ img.thumb {
   height: 80px;
   border-right:0px solid #aaa;
   background-color: #FFFFEF;
+  vertical-align: bottom;
 }
 
 #sidebar:hover {
@@ -78,29 +79,35 @@ img.thumb {
 
 #sidebar_content {
   position: fixed;
-  top: 30px;
   left: 10px;
   width: 100%;
-  margin-top:0;
-  padding:0;
-  border-right:0px solid #aaa;
+  height: 100%;
 }
 
 #content {
   margin: 100px 10px 40px 10px;
+  text-align: center;
 }
 
 
 /***************
     Search Bar
 ***************/
+td {
+	valign: bottom;
+}
+
+table {
+	height: 100%;
+	
+}
 
 .search_form {
-    margin-top:-38px;
     right: 50px;
     float: right;
     padding-left:0px;
-    margin-right:50px;
+    margin-right:25px;
+    margin-top:35px;
     width:129px;
 }
 .search_box {
@@ -131,29 +138,24 @@ img.thumb {
 
 .upload_form {
     margin-top:0px;
-    right: 50px;
-    float: right;
-    padding-right:20px;
-    width:129px;
+    float: left;
 }
 .upload_box {
 	/*margin-right:100px;*/
 	display:none;
     width:200px;
-    float:right;
     left:0;
     padding:8px 4px;
     background:rgba(50, 50, 50, 0.2);
     border:0px solid #dbdbdb;
 }
 .upload_button {
-    display:none;
-    position:relative;
-    padding:6px 15px;
-    left:-8px;
-    border:2px solid #CE5858;
-    background-color:#CE5858;
-    color:#fafafa;
+	margin-bottom:0px;
+	/*padding:50px 50px 50px 50px;*/
+	
+    width:60px;
+    height:60px;
+    float:left;
 }
 .upload_button:hover  {
     background-color:#fafafa;
@@ -164,10 +166,11 @@ img.thumb {
 	margin-bottom:0px;
 	/*padding:50px 50px 50px 50px;*/
 	
-    width:40px;
-    height:40px;
-    float:center;
+    width:60px;
+    height:60px;
+    float:right;
 }
+
 
 /***************
     
@@ -178,6 +181,7 @@ img.thumb {
     font-size: 60px;
     color: #CE5858;
     font-weight: 700;
+	margin-top:28px;
 }
 
 #sidebar {
