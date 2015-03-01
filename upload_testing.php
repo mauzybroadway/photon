@@ -1,7 +1,7 @@
 <?php
 if (!$_POST['submit']) {
 	echo "please fill out all of the form";
-	header('Location: upload.html');
+	//header('Location: upload.html');
 }
 
 $allowedExts = array("gif", "jpeg", "jpg", "png");
