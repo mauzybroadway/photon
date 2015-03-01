@@ -19,7 +19,7 @@ $user_url = $phpFlickrObj->urls_getUserPhotos($user['id']);
 //$photos = $phpFlickrObj->people_getPublicPhotos($user['id'], NULL, "testtag");
 
 //Comma separated list of tags to search for
-$input= str_replace(" ", "", $_POST['tag']);
+$input= str_replace(" ", "", $_POST['search_box']);
 $tags = "testtag";
 $tags = $input;
 $photos = $phpFlickrObj->people_getPhotos($user['id'], array("tags"=>$tags, "tag_mode"=>"any"));
