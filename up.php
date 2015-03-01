@@ -3,27 +3,30 @@
 
 $error=0;
 $f = null;
-if($_POST){
-    /* Check if both name and file are filled in */
-    if(!$_POST['name'] || !$_FILES["file"]["name"]){
-        $error=1;
-    }else{
-        /* Check if there is no file upload error */
-        if ($_FILES["file"]["error"] > 0){
-            echo "Error: " . $_FILES["file"]["error"] . "<br />";
-        }else if($_FILES["file"]["type"] != "image/jpg" && $_FILES["file"]["type"] != "image/jpeg" && $_FILES["file"]["type"] != "image/png" && $_FILES["file"]["type"] != "image/gif"){
-            /* Filter all bad file types */
-            $error = 3;
-        }else if(intval($_FILES["file"]["size"]) > 1000000){
-            /* Filter all files greater than 512 KB */
-            $error = 4;
-        }else{
-            $dir= dirname($_FILES["file"]["tmp_name"]);
-            $newpath=$dir."/".$_FILES["file"]["name"];
-            rename($_FILES["file"]["tmp_name"],$newpath);
-            move_uploaded_file($_FILES["file"]["tmp_name"], "images/" . $_POST['name']);
-         }
-     }
+$allowedExts = array("gif", "jpeg", "jpg", "png");
+$file_size = 400000000;
+$temp = explode(".", $_FILES["file"]["name"]);
+$extension = end($temp);
+$type = strtolower($_FILES["file"]["type"]);
+$image_id = md5($poster_id . $_FILES["file"]["name"]);
+
+/******* File upload size is 20kb ********/
+if ((($type == "image/gif") || ($type == "image/jpeg") || ($type == "image/jpg") 
+|| ($type == "image/pjpeg") || ($type == "image/x-png") || ($type == "image/png")) 
+&& ($_FILES["file"]["size"] < $file_size) && in_array($extension, $allowedExts)) {
+	if ($_FILES["file"]["error"] > 0) {
+		echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
+	} else {
+		echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+		echo "Type: " . $_FILES["file"]["type"] . "<br>";
+		echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
+		echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
+
+		
+		move_uploaded_file($_FILES["file"]["tmp_name"], "images/" . $image_id);
+		echo "Stored in: " . "images/" . $image_id;
+		
+	}
 } 
 
 ?>
