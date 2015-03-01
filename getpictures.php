@@ -1,6 +1,7 @@
 <?php
 
 require_once("includes/phpFlickr.php");
+include_once ("home.html");
 
 /*-------- Flickr Authentication --------*/
 $api_key = 'e429519b8f5703c57c6776a60dfc0583';
@@ -19,18 +20,28 @@ $user_url = $phpFlickrObj->urls_getUserPhotos($user['id']);
 //$photos = $phpFlickrObj->people_getPublicPhotos($user['id'], NULL, "testtag");
 
 //Comma separated list of tags to search for
-$input= str_replace(" ", "", $_POST['tag']);
+
+$input = "";
+if($_POST['search_box']){
+	$input = str_replace(" ", "", $_POST['search_box']);
+}
+
 $tags = "testtag";
 $tags = $input;
 $photos = $phpFlickrObj->people_getPhotos($user['id'], array("tags"=>$tags, "tag_mode"=>"any"));
 
+echo '<div id="content">';
+echo '<div class="images">';
+
 foreach ($photos['photos']['photo'] as $photo)
 {
-  echo '<a href="'.$user_url.$photo['id'].'" title="'.$photo['title'].' (on Flickr)" target="_blank">';
-  echo '<img alt="'.$photo['title'].'" src="'.$phpFlickrObj->buildPhotoURL($photo, "_k").'" />';
-  echo '</a>';
+  echo'<img alt="'.$photo['title'].'" src="'.$phpFlickrObj->buildPhotoURL($photo, "_k").'" class="thumb"/>';
 }
 
+
+	
+echo '</div>';
+echo '</div>';
 
 
 ?>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Listing</title>
+        <meta name="description" content="RackIt - Network for hand-me-down clothing!">
+        
+        <!-- DISABLES PINCH TO ZOOM -->
+        <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
+
+        <!-- STYLE -->
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" href="favicon.ico" />
+    </head>
+
+    <body>
+        
+       
+        <div class="modal">
+        <div class= "modal_container">
+
+            <h1 class="modal_title">New listing</h1>
+
+            <form action="list_bundle.php" method="post" enctype="multipart/form-data">
+                
+ 
+                <input type="file" name="file" id="file" accept="image/*">
+                <p class="hint">hover over upload button for details</p>
+                                
+
+                <div class="button_container">
+                    <input type="submit" class="button" name="submit" id="list" value="List"></input>
+                </div>
+
+            </form>
+
+        </div>
+        </div>
+
+    </body>
+</html>
