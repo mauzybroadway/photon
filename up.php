@@ -46,7 +46,7 @@ if($_POST){
 
 <?php
 if (isset($_POST['name']) && $error==0) {
-    echo ' <h2>Your file has been uploaded to the site to <a href="http://www.skaben.ja/images/"'. $_POST['name'].'">here</a> </h2>';
+    echo ' <h2>Your file has been uploaded to the site to <a href="http://www.skaben.ja/images/'. $_POST['name'].'">here</a> </h2>';
 }else {
     if($error == 1){
         echo "  <font color='red'>Please provide both name and a file</font>";
