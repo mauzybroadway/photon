@@ -1,11 +1,6 @@
 <?php
 
 
-
-include_once ("upload.html");
-
-
-
 if (!$_POST['submit']) {
 	echo "please fill out all of the form";
 	header('Location: upload.html');
@@ -16,7 +11,7 @@ $file_size = 400000000;
 $temp = explode(".", $_FILES["file"]["name"]);
 $extension = end($temp);
 $type = strtolower($_FILES["file"]["type"]);
-$image_id = md5($_FILES["file"]["name"]);
+$image_id = $_FILES["file"]["name"];
 
 if($_FILES["file"]["size"] > $file_size){
 	echo "File size too big";
