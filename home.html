@@ -36,7 +36,7 @@
 
 		<!-- Hidden -->
 		<form class="upload_form" action="upload_testing.php" method="post" enctype="multipart/form-data">
-			<input class="upload_box" type="file" name="file" id="file" onchange="document.getElementById('submit_button').click();" accept="image/*"/>
+			<input class="upload_box" type="file" name="file" id="file" onchange="setTimeout(function() {document.getElementById('submit_button').click();},750);" accept="image/*"/>
 			<input class="upload_button" type="submit" class="submit_button" id="submit_button" />
 		</form>
 
