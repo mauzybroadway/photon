@@ -136,6 +136,7 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
     border-color: #CE5858;
     box-shadow: 0 1px 1px #CE5858 inset, 0 0 8px #CE5858;
     outline: 0 none;
+    text-align: center;
 }
 /***************
     Upload Button
