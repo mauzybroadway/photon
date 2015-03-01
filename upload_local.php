@@ -42,7 +42,68 @@ if ((($type == "image/gif") || ($type == "image/jpeg") || ($type == "image/jpg")
 	header('Location: index.php');	
 }
 
+/*********************************
+  Writing to file for processing
+*********************************/
+$filename = 'comm/enterthevoid.pho';
+$Content = $image_id . "\n";
+ 
+echo "openning file\n";
+$handle = fopen($filename, 'a') or die("can't open file");
+//echo "clear";
+// this clears the file
+// ftruncate($handle, 0);
+echo "writing to file\n";
+fwrite($handle, $Content);
+echo "closing file\n";
+fclose($handle);
 
+// EXECUTE PYTHON SCRIPT HERE
+
+/*********************************
+  wait for lines to come back
+*********************************/
+// wait for signal file, then delete it.
+while (!file_exists("comm/signal.pho")) sleep(1);
+unlink("comm/signal.pho");
+
+$file = fopen("comm/exitthevoid.pho","r");
+$picture_info = fgets($file);
+fclose($file);
+
+/*********************************
+  upload to flickr
+*********************************/
+$parts = explode(":", $pizza);
+$name_of_file = $parts[0];
+$tags = $parts[1];
+
+//Include phpFlickr
+require_once("includes/phpFlickr.php");
+
+$path = "images/".$name_of_file;
+function uploadPhoto($path, $name_of_file) {
+    $apiKey = "e429519b8f5703c57c6776a60dfc0583";
+    $apiSecret = "81617fd7844165cf";
+    $permissions  = "write";
+    $token        = "72157650634145157-428e5e1a693b769d";
+
+    $f = new phpFlickr($apiKey, $apiSecret, true);
+    $f->setToken($token);
+    return $f->async_upload($path, $title);
+}
+
+
+if (isset($_POST['name']) && $error==0) {
+    echo "  <h2>Your file has been uploaded to <a href='http://www.flickr.com/photos/131602302@N05/' target='_blank'>Mauzy's photo stream</a></h2>";
+}else {
+	echo "<h2>Error uploading file</h2>";
+}
+
+/*********************************
+  delete picture
+*********************************/
+unlink($path);
 
 
 ?>
