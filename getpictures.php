@@ -16,8 +16,8 @@ $phpFlickrObj->auth("write");
 // Get user information
 $user = $phpFlickrObj->people_findByUsername('mauzy_broadway');
 $user_url = $phpFlickrObj->urls_getUserPhotos($user['id']);
-$photos = $phpFlickrObj->people_getPublicPhotos($user['id'], NULL, "testtag");
-
+//$photos = $phpFlickrObj->people_getPublicPhotos($user['id'], NULL, "testtag");
+$photos = $phpFlickrObj->photos_search(array("tags"=>"testtag", "tag_mode"=>"any"));
 
 foreach ($photos['photos']['photo'] as $photo)
 {
