@@ -1,9 +1,11 @@
-<?php
-$myfile = fopen("testfile.txt", "r+") or die("Unable to open file!");
-
-ftruncate($myfile, 0);
-
-$txt = "John Doe\n";
-fwrite($myfile, $txt);
-
+<?php $filename = 'test.txt';
+$Content = "Add this to the file\r\n";
+ 
+echo "open";
+$handle = fopen($filename, 'x+');
+echo " write";
+fwrite($handle, $Content);
+echo " close";
+fclose($handle);
+ 
 ?>
