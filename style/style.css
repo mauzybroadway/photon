@@ -13,20 +13,20 @@ ol, ul {
 }
 
 .images img {
-  float:left;
   margin-right:10px;
   margin-bottom:10px;
   border: 5px solid #3F3F3F;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -ms-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+  /*position:relative;*/
 }
 
 .images img:hover{
@@ -34,16 +34,25 @@ ol, ul {
 	cursor:pointer;
 }
 
-img.full {
-	width: 95%;
-	height: auto;
-	border: #ffffff solid thick;
-	border-radius: 18px;
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+.images img:active {
+    z-index: 3;
+    max-height: 100%;
+    max-width: 100%;
+    border: #ffffff solid thick;
+    border-radius: 18px;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%)
 }
 
 img.thumb {
-	height: 256px;
-	width: 256px;
+    height: 288px; /*256*/
+    width: 288px;
     overflow: hidden;
 }
 
@@ -52,25 +61,33 @@ img.thumb {
 ***************/
 	
 #sidebar {
+  font-family: Arial;
+  letter-spacing: -5px;
   position: fixed;
   top: 0px;
   left: 0px;
-  width: 265px;
-  height: 100%;
-  border-right:1px solid #aaa;
+  width: 100%; /*265px;*/
+  height: 80px;
+  border-right:0px solid #aaa;
   background-color: #FFFFEF;
+}
+
+#sidebar:hover {
+    
 }
 
 #sidebar_content {
   position: fixed;
   top: 30px;
-  left: 40px;
-  width: 225px;
-  border-right:1px solid #aaa;
+  left: 10px;
+  width: 100%;
+  margin-top:0;
+  padding:0;
+  border-right:0px solid #aaa;
 }
 
 #content {
-  margin: 0 40px 40px 280px;
+  margin: 100px 10px 40px 10px;
 }
 
 
@@ -79,15 +96,23 @@ img.thumb {
 ***************/
 
 .search_form {
-	float: left;
-    width:400px;
+    margin-top:-38px;
+    right: 50px;
+    float: right;
+    padding-left:0px;
+    margin-right:50px;
+    width:129px;
 }
 .search_box {
-    padding:8px 15px;
+    width:200px;
+    float:right;
+    left:0;
+    padding:8px 4px;
     background:rgba(50, 50, 50, 0.2);
     border:0px solid #dbdbdb;
 }
 .search_button {
+    display:none;
     position:relative;
     padding:6px 15px;
     left:-8px;
@@ -105,9 +130,10 @@ img.thumb {
 ***************/
 
 .title {
-	font-size: 60px;
-	color: #CE5858;
-	font-weight: 700;
+    /*float: bottom;*/
+    font-size: 60px;
+    color: #CE5858;
+    font-weight: 700;
 }
 
 #sidebar {
