@@ -35,22 +35,18 @@ foreach ($photos['photos']['photo'] as $photo) {
 	echo '<img alt="' . $photo['title'] . '" src="' . $phpFlickrObj -> buildPhotoURL($photo, "_k") . '" class="thumb"/>';
 }
 
-echo '</div>';
-echo '</div>';
-
 
 // Just adding in some extra photos here
 if (strlen($input) < 1) {
-	echo '<div id="content">';
-	echo '<div class="images">';
 	$count = 1;
 	while ($count < 20) {
 
 		echo '<img src="images/photo' . $count . '.jpg" class="thumb"/>';
 		$count += 1;
 	}
-
-	echo '</div>';
-	echo '</div>';
 }
+
+echo '</div>';
+echo '</div>';
+
 ?>
