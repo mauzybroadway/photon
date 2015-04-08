@@ -11,6 +11,7 @@ img_path = '../images/photo2.jpg'
 image = upload_kitten(imgur, img_path, name="Ayyy", title="Ohhh", desc="oh word")
 
 tags = tag(image['link'])
+image['photon_tags'] = tags
 
-db.images.insert(tags,image)
+db.images.insert(image)
 

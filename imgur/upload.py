@@ -28,7 +28,7 @@ def upload_kitten(client, image_path, album=None, name=None, title=None, desc=No
 	}
 
         
-	print("Uploading image... f")
+	print("Uploading image...")
         image = client.upload_from_path(image_path, config=config, anon=anon)
 
 	print("Done")
