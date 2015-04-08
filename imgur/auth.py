@@ -36,6 +36,17 @@ def authenticate():
 
 	return client
 
+def anon_auth():
+	# Get client ID and secret from auth.ini
+	config = get_config()
+	config.read('auth.ini')
+	client_id = config.get('credentials', 'client_id')
+	client_secret = config.get('credentials', 'client_secret')
+
+	client = ImgurClient(client_id, client_secret)
+
+	return client
+
 # If you want to run this as a standalone script, so be it!
 if __name__ == "__main__":
 	authenticate()

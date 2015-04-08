@@ -9,29 +9,24 @@
 '''
 
 # Pull authentication from the auth example (see auth.py)
-from auth import authenticate
-
+from auth import anon_auth
 from datetime import datetime
 
 album = None # You can also enter an album ID here
-image_path = 'Kitten.jpg'
+image_path = '../images/photo1.jpg'
 
 def upload_kitten(client):
-	'''
-		Upload a picture of a kitten. We don't ship one, so get creative!
-	'''
-
 	# Here's the metadata for the upload. All of these are optional, including
 	# this config dict itself.
 	config = {
 		'album': album,
-		'name':  'Catastrophe!',
-		'title': 'Catastrophe!',
-		'description': 'Cute kitten being cute on {0}'.format(datetime.now())
+		'name':  'Not Porn',
+		'title': 'Definitely not porn',
+		'description': 'There\'s only a slight chance that this is porn.'
 	}
 
 	print("Uploading image... ")
-	image = client.upload_from_path(image_path, config=config, anon=False)
+	image = client.upload_from_path(image_path, config=config, anon=True)
 	print("Done")
 	print()
 
@@ -43,5 +38,4 @@ if __name__ == "__main__":
 	client = authenticate()
 	image = upload_kitten(client)
 
-	print("Image was posted! Go check your images you sexy beast!")
-	print("You can find it here: {0}".format(image['link']))
+	print("Posted at: {0}".format(image['link']))
