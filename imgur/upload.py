@@ -13,29 +13,32 @@ from auth import anon_auth
 from datetime import datetime
 
 album = None # You can also enter an album ID here
-image_path = '../images/photo1.jpg'
+img_path = '../images/photo1.jpg'
 
-def upload_kitten(client):
+def upload_kitten(client, image_path, album=None, name=None, title=None, desc=None, anon=True):
 	# Here's the metadata for the upload. All of these are optional, including
 	# this config dict itself.
-	config = {
+
+        
+        config = {
 		'album': album,
-		'name':  'Not Porn',
-		'title': 'Definitely not porn',
-		'description': 'There\'s only a slight chance that this is porn.'
+		'name':  name,
+		'title': title,
+		'description': desc
 	}
 
-	print("Uploading image... ")
-	image = client.upload_from_path(image_path, config=config, anon=True)
+        
+	print("Uploading image... f")
+        image = client.upload_from_path(image_path, config=config, anon=anon)
+
 	print("Done")
-	print()
 
 	return image
 
 
 # If you want to run this as a standalone script
 if __name__ == "__main__":
-	client = authenticate()
-	image = upload_kitten(client)
+	client = anon_auth()
+	image = upload_kitten(client, img_path, name="Not Porn", title="Not Porn", desc="for sure")
 
-	print("Posted at: {0}".format(image['link']))
+	print("Posted: %s" % (image['link']))
