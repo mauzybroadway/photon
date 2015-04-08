@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<a href = "getpictures.php"><title>photon</title>
+		<meta name="description" content="Smart image hosting with object recognition">
+
+		<!-- DISABLES PINCH TO ZOOM -->
+		<meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
+
+		<!-- STYLE -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" href="style/style.css" type="text/css" />
+	</head>
+
+	<body>
+
+		<div id="sidebar">
+			<table style="width:100%">
+
+				<td style="width:40%;">
+				<div class="title">
+					ph<b>o</b>ton
+				</div></td>
+				<td align="center">
+				<table cellspacing="0" cellpadding="0" border="0" >
+					<td style="width:auto; padding-right: 20px;">
+					<input class="upload_plus_button" onclick="document.getElementById('file').click();" type="image" src="images/upload.png" />
+					</td>
+					<td style="width:auto; padding-left: 20px;">
+					<form class="upload_form" action="upload_local.php" method="post" enctype="multipart/form-data">
+						<input class="upload_box" type="file" name="file" id="file" accept="image/*"/>
+						<input class="upload_button" type="submit" name="submit" border="0" alt="Submit" />
+					</form></td>
+					
+
+				</table></td>
+				<td style="width:40%;">
+				<form class="search_form" method="post" action="getpictures.php">
+					<input class="search_box" name="search_box" type="text" placeholder="Search..." required>
+					<input class="search_button" type="submit" value="Search">
+				</form></td>
+			
+				
+			</table>
+		</div>
+		
+
+	</body>
+</html>

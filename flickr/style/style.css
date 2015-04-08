@@ -1,0 +1,259 @@
+
+body {
+  line-height: 1;
+  color: #474949;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  background-color: #3F3F3F;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+.images img {
+  margin-right:10px;
+  margin-bottom:10px;
+  border: 5px solid #3F3F3F;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  /*position:relative;*/
+}
+
+.images img:hover{
+	border: 5px solid #CE5858;
+	cursor:pointer;
+}
+
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+.images img:active {
+    z-index: 3;
+    max-height: 100%;
+    max-width: 100%;
+    border: #ffffff solid thick;
+    border-radius: 18px;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%)
+}
+
+img.thumb {
+    height: 288px; /*256*/
+    width: 288px;
+    overflow: hidden;
+}
+
+/***************
+    Layout
+***************/
+	
+#sidebar {
+  font-family: Arial;
+  letter-spacing: -5px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%; /*265px;*/
+  height: 80px;
+  border-right:0px solid #aaa;
+  background-color: #FFFFEF;
+  vertical-align: bottom;
+}
+
+#sidebar:hover {
+    
+}
+
+#sidebar_content {
+  position: fixed;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+#content {
+  margin: 100px 10px 40px 10px;
+  text-align: center;
+}
+
+
+/***************
+    Search Bar
+***************/
+td {
+	valign: bottom;
+}
+
+table {
+	height: 100%;
+	
+}
+
+.search_form {
+    right: 50px;
+    float: right;
+    padding-left:0px;
+    margin-right:25px;
+    margin-top:35px;
+    width:129px;
+}
+.search_box {
+    width:200px;
+    float:right;
+    left:0;
+    padding:8px 4px;
+    background:rgba(50, 50, 50, 0.2);
+    border:0px solid #CE5858;
+}
+.search_button {
+    display:none;
+    position:relative;
+    padding:6px 15px;
+    left:-8px;
+    border:2px solid #CE5858;
+    background-color:#CE5858;
+    color:#fafafa;
+}
+.search_button:hover  {
+    background-color:#fafafa;
+    color:#CE5858;
+}
+
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
+    border-color: #CE5858;
+    box-shadow: 0 1px 1px #CE5858 inset, 0 0 8px #CE5858;
+    outline: 0 none;
+}
+/***************
+    Upload Button
+***************/
+
+.upload_form {
+    margin-top:0px;
+    float: left;
+}
+.upload_box {
+	/*margin-right:100px;*/
+	display:none;
+    width:200px;
+    left:0;
+    padding:8px 4px;
+    background:rgba(50, 50, 50, 0.2);
+    border:0px solid #dbdbdb;
+}
+.upload_button {
+	margin-bottom:0px;
+	/*padding:50px 50px 50px 50px;*/
+	
+    width:50px;
+    height:50px;
+    float:left;
+}
+.upload_button:hover  {
+    background-color:#fafafa;
+    color:#fafafa;
+}
+
+.upload_plus_button {
+	margin-bottom:0px;
+	/*padding:50px 50px 50px 50px;*/
+	
+    width:50px;
+    height:50px;
+    float:right;
+}
+
+
+/***************
+    
+***************/
+
+.title {
+    /*float: bottom;*/
+    font-size: 60px;
+    color: #CE5858;
+    font-weight: 700;
+	margin-top:28px;
+}
+
+#sidebar {
+  opacity: 1;
+}
+
+
+#nav li {
+	float: left;
+	width: 20px;
+}
+
+#nav a {
+  width:40px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+#nav a:hover {
+  
+}
+
+
+/***************
+    Content
+***************/
+
+
+.section {
+  padding: 40px 0;
+}
+
+.section:first-child {
+  border-top: none;
+}
+
+/***************
+    Overlay
+***************/
+
+div#overlay {
+	display: none;
+	z-index: 2;
+	background: #000;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+}
+div#specialBox {
+	display: none;
+	position: relative;
+	z-index: 3;
+	margin: 150px auto 0px auto;
+	width: 500px; 
+	height: 300px;
+	background: #FFF;
+	color: #000;
+}
+div#wrapper {
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	padding-left:24px;
+}
