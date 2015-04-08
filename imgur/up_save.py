@@ -7,7 +7,7 @@ mongo = MongoClient()
 db = mongo.photon
 
 img_path = '../images/photo2.jpg'
-image = upload_kitten(client, img_path, name="Ayyy", title="Ohhh", desc="oh word")
+image = upload_kitten(mongo, img_path, name="Ayyy", title="Ohhh", desc="oh word")
 
 db.images.insert(image)
 
